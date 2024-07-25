@@ -19,4 +19,19 @@ table: books
 - condition \ (TEXT) - VARCHAR(80) \ NULL | NULL DEFAULT('new' / 'second hand')
 - language \ (VARCHAR) - VARCHAR (5) \ NULL | NOTNULL
 - notes \ (MEDIUMTEXT) - TEXT \ NULL | NULL
-- 
+
+
+table: loans
+
+- id
+- book_id UNSIGNED BIGINT FK
+- user_id UNSIGNED BIGINT FK
+- starter_date DATE
+- end_date DATE
+
+
+table: users
+
+- id
+- books_on_loan
+- lent_book
